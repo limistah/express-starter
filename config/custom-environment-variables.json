@@ -1,0 +1,12 @@
+{
+  "projectVersion": "PROJECT_VERSION",
+  "port": "PORT",
+  "jwtSecretKey": "JWT_SECRET_KEY",
+  "mongoURI": "MONGO_URI",
+  "redisURI": "REDIS_URI",
+  "awsAccessKeyId": "AWS_ACCESS_KEY_ID",
+  "awsSecretAccessKey": "AWS_SECRET_ACCESS_KEY",
+  "fromEmail": "FROM_EMAIL",
+  "awsSESVersion": "AWS_SES_API_VERSION",
+  "awsSESRegion": "AWS_SES_REGION"
+}

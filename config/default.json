@@ -1,0 +1,49 @@
+{
+  "basePath": "v1",
+  "siteURL": "http://localhost",
+  "port": "5900",
+  "appName": "woozeee-apis",
+  "allowedDomains": ["*"],
+  "devEmail": "email@dev.com",
+  "replyEmail": "email@dev.com",
+  "fromEmail": "email@dev.com",
+  "queueConcurrency": 2,
+  "paginateMaximumLimit": 20,
+  "paginate": {
+    "limit": 20,
+    "skip": 0
+  },
+  "pathPrefix": "v2",
+  "profileViewInterval": 259200,
+  "mongodb": "mongodb://mongodb:27017/ecp",
+  "supportedDevices": ["mobile-android", "mobile-ios", "mobile-browser", "desktop", "generic"],
+  "userStatuses": ["Active", "Suspended", "Restricted"],
+  "trialSubscriptionDays": 7,
+  "userSuspensionTimeUnits": [
+    "hour",
+    "hours",
+    "day",
+    "days",
+    "week",
+    "weeks",
+    "month",
+    "months",
+    "quarter"
+  ],
+  "userSuspensionTimeDefault": 30,
+  "requiresEmailConfirmation": false,
+  "tokenExpiryMarginBeforeNew": "20",
+  "foreverToken": true,
+  "userRoles": [
+    "Guest",
+    "User",
+    "Moderator",
+    "Content Provider",
+    "Content Manager",
+    "Merchant",
+    "Merchant Manager",
+    "Admin",
+    "Super Admin"
+  ],
+  "testCronTime": "5 * * * * *"
+}
