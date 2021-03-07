@@ -33,7 +33,7 @@ const transporter = nodemailer.createTransport({
  * @param {string} message The message to be delivered
  * @param {string} html Optional html doc. Use this if message is encoded as html.
  */
-const DEFAULT_SUBJECT = "Message from Woozeee";
+const DEFAULT_SUBJECT = `Message from ${config.get("appName")}`;
 const sendEMail = async (receiver, subject = DEFAULT_SUBJECT, message, html) => {
   try {
     if (!receiver || !message || !html) {
@@ -42,12 +42,12 @@ const sendEMail = async (receiver, subject = DEFAULT_SUBJECT, message, html) => 
     // verify connection configuration
     await transporter.verify();
     const mailResponse = await transporter.sendMail({
-      from: `'Woozeee' ${process.env.SES_SENDER_EMAIL}`,
+      from: `${config.get("appName")} ${config.get("fromEmail")}`,
       to: receiver,
       subject,
       text: message,
       html,
-      replyTo: config.get("fromEmail")
+      replyTo: `${config.get("appName")} ${config.get("fromEmail")}`
     });
     console.info(`Message sent ${mailResponse.messageId}`);
     return { status: "Success" };

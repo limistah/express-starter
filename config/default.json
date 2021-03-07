@@ -2,7 +2,7 @@
   "basePath": "v1",
   "siteURL": "http://localhost",
   "port": "5900",
-  "appName": "woozeee-apis",
+  "appName": "express-starter",
   "allowedDomains": ["*"],
   "devEmail": "email@dev.com",
   "replyEmail": "email@dev.com",
